@@ -64,7 +64,6 @@ function addElements() {
                 '                    <th class="tg-us36">OUTBOUND</th>' +
                 '                    <th class="tg-us36">KIT BUILD</th>' +
                 '                    <th class="tg-us36">PUTAWAY</th>' +
-                '                    <th class="tg-us36" style="color: red;">PRODUCTIVITY</th>' +
                 '                </tr>' +
                 '                <tr>' +
                 '                    <td class="tg-p8bj" rowspan="2">' + json[i].INSTRUMENT_INBOUND_TRANSFER + '</td>' +
@@ -73,13 +72,12 @@ function addElements() {
                 '                    <td class="tg-p8bj" rowspan="2">' + json[i].OUTBOUND_TRANSFER + '</td>' +
                 '                    <td class="tg-p8bj" rowspan="2">' + json[i].KIT_BUILD_TRANSFER + '</td>' +
                 '                    <td class="tg-p8bj" rowspan="2">' + json[i].PUTAWAY_TRANSFER + '</td>' +
-                '                    <td class="tg-p8bj" rowspan="2" style="background-color: ' + getColor(json[i].TOTAL_PRODUCTIVITY) + '">' + Math.floor(json[i].TOTAL_PRODUCTIVITY * 100) + '%</td>' +
                 '                </tr>' +
                 '                <tr>' +
                 '                    <td class="tg-us37">' + json[i].EMPLOYEE + '</td>' +
                 '                </tr>' +
                 '            </table>' +
-                '        </div>').hide().appendTo('#prod-table').fadeIn((i + 1) * 200);
+                '        </div>').hide().appendTo('#prod-table').fadeIn((i + 1) * 2000);
         }
 
     });
