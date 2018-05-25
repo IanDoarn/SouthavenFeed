@@ -1,6 +1,7 @@
 import time
 import os
 import sys
+from settings import DOWNLOAD_INTERVAL
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
@@ -13,11 +14,11 @@ print('Complete.')
 
 
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
-WAIT_TIME = 60
+WAIT_TIME = DOWNLOAD_INTERVAL
 
 
 while(True):
-    print('Running download loop')
+    print('Running download loop at interval [{}] minutes'.format(str(WAIT_TIME / 60)))
 
     files = drive.ListFile({'q': "'14ATnYYdZ2Rax2wCO1_86UHwVIczzXaIv' in parents and trashed=false"}).GetList()
 

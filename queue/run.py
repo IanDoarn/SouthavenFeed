@@ -4,6 +4,7 @@ import time
 import sys
 from structure.query import Query
 from structure.qqueue import QQueue
+from settings import UPLOAD_INTERVAL
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
@@ -18,7 +19,7 @@ print('Complete.')
 
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 QUEUE = QQueue()
-WAIT_TIME = 120
+WAIT_TIME = UPLOAD_INTERVAL
 
 print('connecting to google drive')
 gauth = GoogleAuth()
@@ -51,7 +52,7 @@ QUEUE.enqueue(completed_work)
 QUEUE.enqueue(completed_work_other)
 
 print('{} queries queued'.format(str(QUEUE.size)))
-print('Time between execution: {} seconds'.format(str(WAIT_TIME)))
+print('Time between execution: {} minutes'.format(str(WAIT_TIME / 60)))
 
 
 def ListFolder(parent):
