@@ -1,0 +1,13 @@
+[
+    {
+        "EMPLOYEE": "IAN DOARN",
+        "KIT_INBOUND_TRANSFER": 0,
+        "PIECE_INBOUND_TRANSFER": 0,
+        "INSTRUMENT_INBOUND_TRANSFER": 0,
+        "PUTAWAY_TRANSFER": 34,
+        "KIT_BUILD_TRANSFER": 58,
+        "OUTBOUND_TRANSFER": 0,
+        "OTHER_TRANSFER": 0,
+        "TOTAL_PRODUCTIVITY": 0.5
+    }
+]
