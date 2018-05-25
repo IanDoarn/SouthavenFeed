@@ -15,18 +15,20 @@ print('Complete.')
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 WAIT_TIME = 60
 
-file_ids = [
-    {'id': '1YF_LEJG6JRYkP0ClKnyYNyxFm0OaA_zQ', "name": "completed_work.json"},
-    {"id": '1WuQfQkKGHgKBXGsrCkLLZb0oTkD0s2tx', "name": "completed_work_other.json"}
-]
 
 while(True):
     print('Running download loop')
+
+    files = drive.ListFile({'q': "'14ATnYYdZ2Rax2wCO1_86UHwVIczzXaIv' in parents and trashed=false"}).GetList()
+
     try:
-        for fid in file_ids:
-            print('Downloading [{}]'.format(fid['name']))
+
+        for fid in files:
+            print('Downloading [{}]'.format(fid['title']))
+
             filedl = drive.CreateFile({'id': fid['id']})
-            filedl.GetContentFile(os.path.abspath(os.path.join(DIRECTORY, os.pardir, 'html', 'data', fid['name'])))
+
+            filedl.GetContentFile(os.path.abspath(os.path.join(DIRECTORY, os.pardir, 'html', 'data', fid['title'])))
             print('Complete.')
             print('Waiting [{}] seconds'.format(WAIT_TIME))
             time.sleep(WAIT_TIME)

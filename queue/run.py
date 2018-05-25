@@ -34,13 +34,15 @@ print('Building queue')
 with open(DIRECTORY + '\\sql\\ORACLE_COMPLETED_WORK.sql', 'r')as q_file:
     completed_work = Query(CURSOR, q_file.read(),
                            'completed_work.json',
-                           'completed_work'
+                           'completed_work',
+                           '1azQ3ZMQDLE0CiRDdcM2o3HusjdDlfnuT'
                            )
 
 with open(DIRECTORY + '\\sql\\ORACLE_COMPLETED_WORK_OTHER.sql', 'r')as q_file:
     completed_work_other = Query(CURSOR, q_file.read(),
                            'completed_work_other.json',
-                           'completed_work_other'
+                           'completed_work_other',
+                           '1k5WvS0VZYWAp2n29OVbht2w6FCCRYb0L'
                            )
 
 
@@ -50,6 +52,18 @@ QUEUE.enqueue(completed_work_other)
 
 print('{} queries queued'.format(str(QUEUE.size)))
 print('Time between execution: {} seconds'.format(str(WAIT_TIME)))
+
+
+def ListFolder(parent):
+  filelist=[]
+  file_list = drive.ListFile({'q': "'%s' in parents and trashed=false" % parent}).GetList()
+  for f in file_list:
+    if f['mimeType']=='application/vnd.google-apps.folder': # if folder
+        filelist.append({"id":f['id'],"title":f['title'],"list":ListFolder(f['id'])})
+    else:
+        filelist.append(f['title'])
+  return filelist
+
 
 # main application loop
 while(True):
@@ -67,8 +81,17 @@ while(True):
 
         print('uploading file to drive')
 
+        files = drive.ListFile({'q': "'14ATnYYdZ2Rax2wCO1_86UHwVIczzXaIv' in parents and trashed=false"}).GetList()
+
+        for f in files:
+            if f['title'] == q.name + '.json':
+                print('deleting [{}] [{}]'.format(f['id'], f['title']))
+                temp = drive.CreateFile({'id': f['id']})
+                temp.Delete()
+
         file1 = drive.CreateFile(
-            {q.name: q.name + '.json', 'parents': [
+            {
+                q.name: q.name + '.json', 'parents': [
                 {'id': '14ATnYYdZ2Rax2wCO1_86UHwVIczzXaIv'}
             ]}
         )

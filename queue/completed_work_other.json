@@ -1,5 +1,16 @@
 [
     {
+        "EMPLOYEE": "DONAVAN STRICKLAND",
+        "KIT_INBOUND_TRANSFER": 8,
+        "PIECE_INBOUND_TRANSFER": 7,
+        "INSTRUMENT_INBOUND_TRANSFER": 0,
+        "PUTAWAY_TRANSFER": 0,
+        "KIT_BUILD_TRANSFER": 0,
+        "OUTBOUND_TRANSFER": 0,
+        "OTHER_TRANSFER": 0,
+        "TOTAL_PRODUCTIVITY": 0.08
+    },
+    {
         "EMPLOYEE": "IAN DOARN",
         "KIT_INBOUND_TRANSFER": 0,
         "PIECE_INBOUND_TRANSFER": 0,

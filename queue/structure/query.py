@@ -2,13 +2,14 @@ import json
 
 class Query:
 
-    def __init__(self, cursor, query_string, file_name, name):
+    def __init__(self, cursor, query_string, file_name, name, file_id):
         self.cursor = cursor
         self.query_string = query_string
         self.headers = None
         self.result = None
         self.file_name = file_name
         self.name = name
+        self.file_id = file_id
 
     def execute(self):
         data = self.cursor.execute(self.query_string)
