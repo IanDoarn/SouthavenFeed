@@ -1,5 +1,5 @@
-var scrollTimeDown = 100000;
-var scrollTimeUp = 50000;
+var scrollTimeDown = 1000;
+var scrollTimeUp = 5000;
 
 function getColor(value){
     //value from 0 to 1
