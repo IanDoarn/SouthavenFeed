@@ -18,7 +18,7 @@ print('Complete.')
 
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 QUEUE = QQueue()
-WAIT_TIME = 30
+WAIT_TIME = 120
 
 print('connecting to google drive')
 gauth = GoogleAuth()
