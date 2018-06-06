@@ -1,10 +1,28 @@
 @echo off
+
+echo updating application
+git pull
+pip install -r requirements.txt
+echo complete
+
+cd ..
+
 echo starting helper scripts
 cd scripts
 start /b python prevent_sleep.py
 echo complete
+
 cd ..
-echo starting upload loop
-cd queue
-start /b python run.py
-echo complete
+
+echo starting minimal webserver on port 8000
+cd html
+start /b python -m http.server 8000
+start chrome http://localhost:8000
+echo server available on local machine @ http://localhost:8000
+cd ..
+
+echo starting application loop
+cd %cd%\tracker\tracker\tracker\bin\Release
+start /b tracker.exe %USERPROFILE%\SouthavenFeed\html\data\
+echo setup complete
+echo !!WATCH CONSOLE FOR ERRORS!!

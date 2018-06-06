@@ -142,7 +142,6 @@ WITH TRANSFERS AS (
         'THIOUBALO SY',
         'TIFFANY THOMAS',
         'SHANIKA MCCRAVEN',
-        'GONZLA JOYNER',
         'JAMES SULLIVAN',
         'NORMA CISNEROS',
         'JACQUELINE LOPEZ',

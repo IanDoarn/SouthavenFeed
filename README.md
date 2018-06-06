@@ -8,6 +8,8 @@ requirements
 ```
 cx_Oracle
 json
+pydrive
+pyautogui
 python 3.6+
 ```
 

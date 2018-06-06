@@ -139,8 +139,7 @@ WITH TRANSFERS AS (
         'SHAY ROBINSON',
         'NICHOLAS THOMAS',
         'DONAVAN STRICKLAND',
-        'BROOKE BENNETT',
-        'SCOTT RIPLEY'
+        'GONZLA JOYNER'
       )
     GROUP BY
       EM.SITE_ID,

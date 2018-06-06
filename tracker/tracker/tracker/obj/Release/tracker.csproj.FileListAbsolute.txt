@@ -1,0 +1,8 @@
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\bin\Release\tracker.exe.config
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\bin\Release\tracker.exe
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\bin\Release\tracker.pdb
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\bin\Release\Newtonsoft.Json.dll
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\bin\Release\Newtonsoft.Json.xml
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\obj\Release\tracker.exe
+C:\Users\doarni\SouthavenFeed\tracker\tracker\tracker\obj\Release\tracker.pdb
