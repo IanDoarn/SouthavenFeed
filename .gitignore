@@ -201,3 +201,5 @@ _testmain.go
 
 # Misc
 bin/Debug
+*.exe.config
+*.pdb
