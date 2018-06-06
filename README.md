@@ -5,9 +5,10 @@ Southaven live productivity feed uses C# and Python to present real time employe
   
 ## Example  
 Employees can see what has been done in real time presented like:  
-|EMPLOYEE|KIT INBOUND|PIECE INBOUND|INSTRUMENT INBOUND|PUTAWAY|KIT BUILD|OUTBOUND|OTHER|  
-|--|--|--|--|--|--|--|--|--|  
-| ROLANDO FLORES | 163 | 48 | 0 | 4 | 26 | 0 | 0 |  
+
+| EMPLOYEE | KIT_INBOUND | PIECE_INBOUND | INSTRUMENT_INBOUND | PUTAWAY | KIT_BUILD | OUTBOUND | OTHER |
+|:--------------|:---:|:--:|:-:|:-:|:--:|:-:|:-:|    
+| ROLANDO FLORES | 163 | 48 | 0 | 4 | 26 | 0 | 0 |
   
 ## Process  
 Information is queried from Oracle using the queries in the folder `sql`. These are then written to a json file. For example, running `completed_work_other.sql` returns the following json:  
@@ -25,7 +26,8 @@ The application consists of three main parts:
    
 The application runs off a python webserver using  
 ```cmd  
- python -m http.server 8000```  
+ python -m http.server 8000
+ ```  
 Data is refreshed in the background by the tracker application. it is then presented to the website via js.  
   
 ### Requirements  
