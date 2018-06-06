@@ -138,7 +138,9 @@ WITH TRANSFERS AS (
         'IAN DOARN',
         'SHAY ROBINSON',
         'NICHOLAS THOMAS',
-        'DONAVAN STRICKLAND'
+        'DONAVAN STRICKLAND',
+        'BROOKE BENNETT',
+        'SCOTT RIPLEY'
       )
     GROUP BY
       EM.SITE_ID,

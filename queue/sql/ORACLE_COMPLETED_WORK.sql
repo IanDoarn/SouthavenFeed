@@ -147,7 +147,6 @@ WITH TRANSFERS AS (
         'NORMA CISNEROS',
         'JACQUELINE LOPEZ',
         'KASEY WILSON',
-        'MICHAEL PRICE',
         'JEFFERY ROBINSON'
       )
     GROUP BY

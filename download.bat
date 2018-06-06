@@ -20,7 +20,7 @@ cd ..
 
 echo starting minimal webserver on port 8000
 cd html
-start chrome http://localhost:8000
 start /b python -m http.server 8000
+start chrome http://localhost:8000
 
 echo server available on local machine @ http://localhost:8000
