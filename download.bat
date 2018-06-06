@@ -1,6 +1,7 @@
 @echo off
 echo updating application
 git pull
+pip install -r requirements.txt
 echo complete
 
 echo starting download loop
