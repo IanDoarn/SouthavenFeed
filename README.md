@@ -6,17 +6,10 @@ Live feed for Southaven Zimmer Biomet Productivity
 requirements
 --
 ```
-cx_Oracle
-json
-pydrive
-pyautogui
 python 3.6+
+.NET Framework 4+
 ```
 
 Usage
 ---
-```powershell
-python run.py
-```
-
-Or use run.bat
+use `run.bat` to launch the application

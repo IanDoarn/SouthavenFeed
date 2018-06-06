@@ -1,12 +1,6 @@
 var scrollTimeDown = 100000;
 var scrollTimeUp = 100000;
 
-function getColor(value){
-    //value from 0 to 1
-    var hue=(value*120).toString(10);
-    return ["hsl(",hue,",100%,50%)"].join("");
-}
-
 function loop() {
 
 

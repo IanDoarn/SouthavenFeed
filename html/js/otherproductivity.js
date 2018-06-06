@@ -1,41 +1,33 @@
-var scrollTimeDown = 5000;
-var scrollTimeUp = 4000;
-
-function getColor(value){
-    //value from 0 to 1
-    var hue=(value*120).toString(10);
-    return ["hsl(",hue,",100%,50%)"].join("");
-}
+var scrollTimeDown = 50000;
+var scrollTimeUp = 10000;
 
 function loop() {
 
-
-
-    var ScrollPage = function() {
+    var ScrollPage = function () {
         var r = $.Deferred();
         animation();
         return r;
     };
 
-    var AddElements = function() {
+    var AddElements = function () {
         var r = $.Deferred();
         addElements();
         return r;
     };
 
 
-    var ClearPage = function() {
+    var ClearPage = function () {
         var r = $.Deferred();
 
-        setTimeout(function() {
+        setTimeout(function () {
             removeElements();
         }, scrollTimeUp + scrollTimeUp + 100);
 
         return r;
     };
 
-   AddElements();
-   ScrollPage().then(ClearPage());
+    AddElements();
+    ScrollPage().then(ClearPage());
 
 }
 
@@ -52,8 +44,8 @@ function animation() {
 
 function addElements() {
 
-    $.getJSON("../data/completed_work_other.json", function(json) {
-        for(var i = 0; i < json.length; i++) {
+    $.getJSON("../data/completed_work_other.json", function (json) {
+        for (var i = 0; i < json.length; i++) {
             $('        <div id="#n' + i + '" class="main-content">' +
                 '            <table class="tg">' +
                 '                <tr>' +
@@ -64,7 +56,7 @@ function addElements() {
                 '                    <th class="tg-us36">OUTBOUND</th>' +
                 '                    <th class="tg-us36">KIT BUILD</th>' +
                 '                    <th class="tg-us36">PUTAWAY</th>' +
-                '                    <th class="tg-us36">OTHER</th>'  +
+                '                    <th class="tg-us36">OTHER</th>' +
                 '                </tr>' +
                 '                <tr>' +
                 '                    <td class="tg-p8bj" rowspan="2">' + json[i].INSTRUMENT_INBOUND_TRANSFER + '</td>' +
@@ -88,11 +80,11 @@ function addElements() {
 
 function removeElements() {
 
-    $($('#prod-table').children('.main-content').get().reverse()).each(function() {
+    $($('#prod-table').children('.main-content').get().reverse()).each(function () {
         $(this).fadeOut(2000);
     });
 
-    $.getJSON("../data/navigation.json", function(json) {
+    $.getJSON("../data/navigation.json", function (json) {
         console.log('changing page');
         window.location.href = json.otherproductivity;
     });
