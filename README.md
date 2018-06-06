@@ -1,7 +1,7 @@
 
   
 # Zimmer Biomet Southaven Productivity Feed  
-Southaven live productivity feed uses C# and Python to present real time employee numbers in a visual animated format to employees, management, and other working on site.  
+Southaven live productivity feed uses C# and Python to present real time employee numbers in a visual animated format to employees, management, and others working on site.  
   
 ## Example  
 Employees can see what has been done in real time presented like:  
@@ -58,17 +58,18 @@ The application currently requires Python 3.6+, .NET 4+, and HTML5. However, I p
 # Examples  
 There are currently 3 pages displayed during the applications main loop as outlined in `navigation.json`  
 ```json  
-{    
-  "productivity": "otherproductivity.html",    
-  "otherproductivity": "motto.html",    
-"motto": "productivity.html" }  
+{
+  "productivity": "otherproductivity.html",
+  "otherproductivity": "motto.html",
+  "motto": "productivity.html"
+}
 ```  
   
 ## Homepage  
 ![Homepage](https://github.com/IanDoarn/SouthavenFeed/blob/master/images/Homepage.PNG)  
   
 ## Productivity  
-There are 2 productivity pages but one if for managers, this is the main page  
+There are 2 productivity pages but one is for managers, this is the main page  
 ![Productivity](https://github.com/IanDoarn/SouthavenFeed/blob/master/images/Porductivity.PNG)  
   
 ## The Power Of Us  
