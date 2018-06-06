@@ -198,3 +198,6 @@ _testmain.go
 .tmp
 #.sass-cache
 #builds/**/images/*
+
+# Misc
+bin/Debug
